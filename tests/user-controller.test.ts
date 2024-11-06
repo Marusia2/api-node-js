@@ -58,7 +58,7 @@ test.describe('User management API', () => {
         const deleteResponseBody = await deleteResponse.json()
         console.log(deleteResponseBody)
         const getResponse = await request.get(`${baseURL}/${id}`);
-        expect(getResponse.status()).toBe(404);
+        expect(getResponse.status()).toBe(StatusCodes.NOT_FOUND);
 
     });
 
